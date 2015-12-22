@@ -12,14 +12,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         a="toni";
-        a="Indrawan";
+        a="123";
     }
     public String pacar() {
         return "pacar";
     }
 
     public String j() {
-        return "j";
+        return "j123";
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
