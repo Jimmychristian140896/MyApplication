@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
         return "pacar";
     }
 
+    public String j() {
+        return "j";
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
