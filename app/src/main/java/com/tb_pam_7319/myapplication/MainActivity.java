@@ -14,6 +14,9 @@ public class MainActivity extends AppCompatActivity {
         a="toni";
         a="Indrawan";
     }
+    public String pacar() {
+        return "pacar";
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
