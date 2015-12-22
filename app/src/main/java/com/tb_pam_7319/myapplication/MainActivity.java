@@ -1,9 +1,12 @@
 package com.tb_pam_7319.myapplication;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     String a;
@@ -13,6 +16,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         a="toni";
         a="123";
+
+        Intent intent = this.getIntent();
+        if (intent.getAction().equals(Intent.ACTION_SEND)) {
+
+            String text_data = intent.getStringExtra(Intent.EXTRA_TEXT);
+            Toast.makeText(getApplicationContext(),text_data,Toast.LENGTH_LONG).show();
+
+            String h="http://admin.id.kurioapps.com/article/submit_pin?url=";
+
+            String u=text_data;
+            //window.open(h+u);
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(h+u));
+            startActivity(browserIntent);
+            // and now you can handle this text here what you want to do.
+        }
     }
     public String pacar() {
         return "pacar";
